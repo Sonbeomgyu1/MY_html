@@ -1,0 +1,67 @@
+<form>
+    <fieldset>
+        <legend>배송 정보</legend>
+        <ul id="shipping">
+            <li>
+                <label for="prod">주문 상품</label>
+                <input type="text" id="prod" value="상품용 3KG" readonly>
+            </li>
+            <li>
+                <label for="user-name">이름</label>
+                <input type="text" id="user-name" autofocus required>
+            </li>
+            <li>
+                <label for="addr">배송 주소</label>
+                <input type="text" id="addr" required>
+            </li>
+            <li>
+                <label for="mail">이메일</label>
+                <input type="email" id="mail">
+            </li>
+            <li>
+                <label for="phone">연락처</label>
+                <input type="tel" id="phone" placeholder="하이픈 뺴고 입력해주세요.(01012345678)"required>
+            </li>
+            <li>
+                <label for="d-day">배송 지정</label>
+                <input type="date" id="d-day"><small>(주문일로부터 최소 3일 이후)</small>
+            </li>
+        </ul>
+    </fieldset>
+    <div>
+        <input type="submit"value="주문하기">
+        <input type="reset" value="취소하기">
+    </div>
+</form>
+
+<ul>
+    <li>
+        <label for="uid">아이디</label>
+        <input type="text" id="uid"autofocus placeholder="4자 ~ 10자 사이, 공백없이"required>
+    </li>
+    <li>
+        <label for="umail">이메일</label>
+                <input type="email" id="umail" required>
+    </li>
+    <li>
+        <label for="pwd1">비밀번호</label>
+                <input type="password" id="pwd1"placeholder="문자와 숫자, 특수 기호 포함"required>
+    </li>
+    <li>
+        <label for="pwd2">비밀번호 확인</label>
+                <input type="password" id="pwd2"required>
+    </li>
+</ul>
+
+<label for="memo">메모</label>
+<textarea id="memo" cols="40" rows="4"></textarea>
+
+<li>
+    <label for="path">가입 경로</label>
+    <section id="path">
+        <option value="blog">블로그</option>
+        <option value="search">검색</option>
+        <option value="sns">SNS</option>
+        <option value="etc">기타</option>
+    </section>
+</li>

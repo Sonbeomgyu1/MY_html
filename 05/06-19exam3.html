@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+ .title{
+    text-align: center;
+ }
+
+ table{
+    border-top: 2px solid red; 
+    border-bottom: 2px solid red; 
+    padding: 2px;
+ }
+
+
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        
+        <tr>
+            <td class="title"><label>이름 </label></td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td class="title"><label>아이디 </label></td>
+            <td><input type="text" id="id">
+                <a href="">중복확인</a>
+        </tr>
+        <tr>
+            <td class="title"><label>비밀번호 </label></td>
+            <td><input type="password" id="userpw"></input><label style="padding: 5px; font-size:xx-small; ">6자 이상</td>
+        </tr>
+        <tr>
+            <td class="title"><label>비밀번호 확인 </label></td>
+            <td><input type="password" id="userpwChk"></td>
+        </tr>
+        <tr>
+            <td class="title"><label for="text">비밀번호 힌트/답변</label></td>
+            <td><select>
+                    <option value="">선택하세요</option>
+                    <option value="30">졸업한 초등학교 이름은?</option>
+                    <option value="31">제일 친한친구의 핸드폰 번호는?</option>
+                    <option value="32">아버지 성함은?</option>
+                    <option value="33">어머니 성함은?</option>
+                    <option value="34">어릴적 내 별명은?</option>
+                    <option value="35">가장 아끼는 물건은?</option>
+                    <option value="36">좋아하는 동물은?</option>
+                    <option value="37">좋아하는 색깔은?</option>
+                    <option value="38">선택하세요</option>
+                </select></td>
+            <option value="선택하세요"></option>
+        </tr>
+        <tr>
+            <td class="title"><label>답변 </label></td>
+            <td><input type="text" id="text"></td>
+        </tr>
+        <tr>
+            <td class="title"><label>이메일 </label></td>
+            <td><input type="email" id="email"></td>
+        </tr>
+        <tr>
+            <td class="title"><label>전화번호 </label></td>
+            <td><input type="number" id="number"></td>
+        </tr>
+        <tr>
+            <td class="title"><label>메일/sns정보 수신 </label></td>
+            <td>
+                <input type="radio" id=rec name="drone" value="rec">수신
+                <input type="radio" id=rec1 name="drone" value="rec1">수신거부
+            </td>
+        </tr>
+        <tr>
+            <td class="title"><label>관심분야</label></td>
+            <td>
+                <input type=checkbox name="hobby" value="" id="생두"><label for="생두#id">생두</label>
+                <input type=checkbox name="hobby" value="" id="원두"><label for="원두#id">원두</label>
+                <input type=checkbox name="hobby" value=""><label for="로스팅">로스팅</label>
+                <input type=checkbox name="hobby" value=""><label for="핸드드립">핸드드립</label>
+                <input type=checkbox name="hobby" value=""><label for="에스프레소">에스프레소</label>
+                <input type=checkbox name="hobby" value=""><label for="창업">창업</label>
+            </td>
+        </tr>
+
+    </table>
+    <div style="text-align: center; padding: 2px;">
+        <a href="index.html"><input type="button" value="회원가입"></a>
+        <input type="button" value="취소" onclick="reset();" />
+    </div>
+</body>
+
+</html>
