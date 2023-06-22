@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<style>
+#textarea{
+    background-color: transparent;
+}
+
+
+
+/*요구사항에 맞게 HTML 코드를 작성하시오.
+1. 회원여부는 회원과 비회원 중 하나만 선택되도록 하고 기본은 회원으로 함
+2. 취미는 중복 선택이 가능해야 함
+3. 직업도 5개의 항목 중 4개의 항목이 보여지고 첫 번째 항목이 기본 선택되도록 함.(5번째는 "기타")
+4. 남기고 싶은 말은 5행 70열 크기로 설정
+5. 초기화와 전송 버튼 작성
+6. 전송을 클릭하면 result.html 화면으로 이동하고 전송방식은 get방식 */
+
+</style>
+
+<body>
+    <fieldset>
+        <table>
+            <tr>
+                <td class="title"><label>회원 여부 :</label>
+                    <label><input checked type ="radio" name=id value="">회원</label>
+                    <label><input type="radio" name=id value="">비회원</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="hobby"><label>취미(중복선택) :</label>
+                    <input type=checkbox name="hobby" value="reading" id="reading"><label for="reading#id">독서</label>
+                    <input type=checkbox name="hobby" value="movie" id="movie"><label for="movie#id">영화</label>
+                    <input type=checkbox name="hobby" value="music" id="music"><label for="music">음악</label>
+                    <input type=checkbox name="hobby" value="sports" id="sports"><label for="sports">스포츠</label>        
+                </td>
+            </tr>
+            <tr>
+                <td class="title1"><label for="text">직업 : </label>
+                    <select size="4">
+                        <option selected value="student" >학생</option>
+                        <option value="worker">회사원</option>
+                        <option value="teacher">교사</option>
+                        <option value="self-employed">자영업</option>
+                        <option value="etc">기타</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="title2">
+                    <label for="">남기고 싶은 말:</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea id="story" name="story" rows="5" cols="70" placeholder =" 150자 내외로 글을 남겨주세요."></textarea>
+                </td>   
+            </tr>
+        </table>
+    </fieldset>
+    <div style="text-align: left;; padding: 10px;">
+        <form method="get" action="result.html">
+            <input type="button" value="초기화" onclick="reset();">
+            <!-- <button onclick="reset();">초기화</button> -->
+            <input type="submit" value="전송">
+        </form>
+    </div>
+
+</body>
+
+</html>

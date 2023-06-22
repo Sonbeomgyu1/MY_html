@@ -5,7 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>선택자</title>
     <link href="./resources/css/reset.css" rel="stylesheet">
+   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet"> 
+    -->
     <style>
+        @font-face {
+            font-family: 'Ostrich';
+            font-style: bold;
+            font-weight: 200;
+            font-display: swap;
+            src: url('resources/fonts/ostrich-sans-bold.woff') format('woff')
+            ,
+            url('resources/fonts/ostrich-sans-bold.ttf') format('ttf');
+          }
+          div{
+            /*
+            font-family: 'Ostricj','Orbit','함초롱바탕',Courier, monospace;
+            font-size: 28px;
+            font-weight: 400;
+            font-variant: small-caps;
+            font-style: oblique;
+            */
+            
+            font:  800 2em 'Orbit','함초롱바탕',Courier, monospace;
+            line-height: 50px;
+           
+          }
         /*css문법
         첫번쨰 p태그에 background yellow, 글자색은 green
         두번쨰 p태그에 background red, 글자색은 blue
@@ -42,15 +68,43 @@
 
 
            p.ca.cc{
-            background-color:yellow ; color: green;}
+           /* border-width: 3px;
+            border-color: black;
+            border-style: solid;
+            */
+        /*    border-top: 5px solid black;
+            border-bottom: 1px solid red;
+            border-left: 10px solid black;
+            border-right: 5px solid black;
+        */
+            
+            border-width: 5px 10px 2px;
+            border-color: red blue greenyellow;
+            border-style: solid dashed dotted;
+            border-radius: 50px 10px 50px 10px;
+            
+            
+            
+            display: inline-block;
+            width: 400px;
+            padding: 20px;
+            margin: 20px;
+            background-color:rgb(250 ,250 ,00, .3) ; color: green;} 
            p.ca.cb.cc{
-            background-color:red ;color:blue;}
+            background:hsl(360, 70%, 10%) ;color: yellow;}
            p.cb{
             background-color:grey ; color: red;}
+
+         
     </style>
 </head>
 <body>
     <div> 
+        <pre>
+            여기
+            그대로
+               표현
+        </pre>
     <p id="id1" class="c1 ca">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>>
     <a>여기 끼워넣기</a>
     <p id="id2" class="c2 ca cb cc">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigator</title>
+
+    <!-- navigator 조건 -
+1. navi 항목은 HTML5, CSS3, JavaScript, jQuery로 총4개이며, 각각 클릭 시 해당하는 페이지로 이동해야한다.
+2. navi의 메뉴 각각의 크기는 150 x 50 px 크기로 지정하며 가로로 한줄로 배치된다.
+3. 배경색은 검정색, 글씨색은 흰색으로 하며, 좌/우, 상/하로 가운데정렬 되어있어야 한다.
+4. 메뉴에 마우스가 올라간 경우 글씨는 두꺼워지고, 글씨크기는 1.2배로 커진다.
+5. 마우스로 메뉴글씨 뿐아니라 해당 메뉴영역에 마우스가 올라가더라도 동일한 효과가 발생해야 한다. -->
+    <style>
+        li {
+            display: inline-block;
+
+        width: 150px; 
+        height: 50px;
+        background-color: black;
+        text-align: center;
+         vertical-align: middle; 
+        padding: 5px 15px;
+        color: white;
+        }
+    li:hover{
+        transform: scale(1.2,1.2)
+    } 
+    </style>
+
+
+</head>
+
+<body>
+    <nav class="navi">
+        <ul>
+            <li>HTMl5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>jQuery</li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>
