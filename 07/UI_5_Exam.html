@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI디자인_5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <style>
+        /*모든실습에 걸고 시작해야함*/
+        /*0. 화면에서 사용되는 공통 (색상,폰트, ul, table 등의 style 지정) reset.css*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        /*1. body 자식 layout */
+        /*2. header 자식 layout */
+
+        header > div.logo{
+            float: left;
+        }
+        header > div.login{
+            float: right;
+        }
+        /* float 사용시 부모 태그에 overflow로 계산함*/
+        header{
+            overflow: hidden;
+        }
+       
+        
+        /*2. nav 자식 layout */
+         nav li{
+            float: left;
+            width: 15%;
+        }
+        nav> ul{
+            overflow: hidden;
+            
+        }
+        /* float 사용시 다름 태그에 clear */
+        section{
+            clear: both;
+        }
+        li:first-of-type{
+            margin-left: 5%;
+        }
+        /* section 자식 layout*/
+        section{
+            height: 500px;
+        }
+        /*footer 자식 layout*/
+        footer{
+            height: 50px;
+        }
+        /*3. nav 자식 detail */
+        nav a{
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        /*section 자식 detail*/
+        section{
+            background-color: #999;
+        }
+        /*footer 자식 detail*/
+        footer{
+            background-color: #ccc;
+            line-height: 50px;
+            text-align: center;
+        }
+        </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="#" width="100" height="100">
+        </div>
+        <div class="login">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>아이디</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>패스워드</td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit"><input type="reset"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+            <li><a href="#">메뉴6</a></li>
+            
+        </ul>
+        
+    </nav>
+    <section>
+
+    </section>
+    <footer>
+        <marquee scrolldelay="2" loop="2">Copyright &#8448; &copy; 1998-2019 KH Information Educational Institute All Right Reseved</marquee>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+
+</html>
