@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--[1] 해상도 - 최적 해상도1250 결정(최대/최소 마지막점검) -->
+    <!--[2] content 영역 1040px 80vw 90%, 배치(중앙,왼쪽) -->
+    <!--[3] reset.css 폴더경로 -->
+    <link href=./resources/css/reset.css" rel="styllesheet" <!--TODO JS jQuery -->
+    <!--[4] project명 또는 core.css 폴더경로 - bootstrap, template 등으로 대체 -->
+    <!--[4] 기본색상 10~15개정도 class 미리 만들어두기 -->
+    <!--[4] 폰트크기 5~7개정도 class 미리 만들어두기 -->
+    <!--[4] button 3개 class 미리 만들어두기-->
+    <!--[4] a 모양 미리 만들어두기-->
+
+    <!--[5] Layout 영역-->
+    <style>
+        
+
+
+            /* 영역 4가지
+            content 영역
+            border 영역
+            padding 영역
+            magin 영역
+            */
+
+        }
+
+        .wrap.header {
+            background: bisque;
+        }
+
+        .wrap.content {
+            background: beige;
+        }
+
+        .wrap.footer {
+            background: bisque;
+        }
+
+        header,
+        #content,
+        footer {
+            /*중앙정렬*/
+            box-sizing: border-box;
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid black;
+
+            /* padding */
+            padding: 5px;
+        }
+
+        #content {
+            overflow: hidden;
+        }
+
+        /* section*/
+        section {
+            width: 394px;
+            float: left;
+        }
+
+        /* aside*/
+        aside {
+            width: 194px;
+            float: right;
+        }
+
+        article {
+            padding: 5px;
+            border: 1px solid black;
+            margin: 10px 10px 10px 0;
+        }
+    </style>
+    <style>
+        /*헤더 영역 스타일*/
+        header ul {
+            overflow: hidden;
+        }
+
+        header ul>li {
+            float: left;
+        }
+        header{
+            position: relative;
+            height: 90px;
+        }
+        header > logo{
+            /*조상의 (relative)기준위치로부터 절대위치 잡기*/
+            position: absolute;top: 20px;left: 0;
+        }
+        header > .top-menu{
+            position: absolute;right: 0px;top: 5px;
+        }
+        header > .main-menu{
+            position: absolute; bottom: 0;right: 5px;
+        }
+    </style>
+    <style>
+        /*footer 영역 style*/
+    </style>
+    <style>
+        /*aside 영역 style*/
+        /*선택버튼이 안보이게 하는 기능*/
+        aside input[type=radio]{
+           /* visibility: hidden; 공간은 차지하면서 버튼은 안보이게하는거*/
+           display: none; /*공간 차지 안하고 버튼은 안보이게 하는거*/
+            
+        }
+        .items .tab-item{
+            display: none;
+        }
+        aside input[type=radio]:nth-of-type(1):checked ~ .items .tab-item:nth-of-type(1){
+            display: block;
+        }
+        aside input[type=radio]:nth-of-type(2):checked ~ .items .tab-item:nth-of-type(2){     
+            display: block;
+        }
+        aside .labels{
+            overflow: hidden;
+        }
+       aside .labels > label{
+        width: 50%; display: block; float:left;
+        background-color: black;
+        color: white;
+        text-align: center;
+        height: 30px; line-height: 30px;
+        border: 1px solid black; box-sizing: border-box;
+        
+        }
+        aside input[type=radio]:nth-of-type(1):checked ~ .labels .label:nth-of-type(1){
+            background-color: white;
+            color: black;
+        }
+        aside input[type=radio]:nth-of-type(2):checked ~ .labels .label:nth-of-type(2){
+            background-color: white;
+            color: black;
+        }
+        
+
+        aside .item li a{
+            overflow: hidden;
+        }
+        aside .item li>a>div{
+            float: left;
+        }
+        aside .items li {
+            /*
+            border-bottom: 1px solid black;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+
+            border: 1px solid black;
+            border-top: 0;
+            */
+            border: black;
+            border-style: solid;
+            border-width: 0 1px 1px 1px;
+            padding: 5px;
+            
+        }
+        asid3 .item li .descript p{
+            /*말줄임 -1*/
+            text-overflow: ellipsis; white-space: nowrap;
+            width: 120px; overflow: hidden;
+            /* 말줄임 속성 end*/
+        }
+        aside .itmes li .thumnail{
+            ;
+        }
+    </style>
+    <style>
+        /*section/article 영역 style*/
+    </style>
+</head>
+
+<body>
+    <div class="wrap header">
+        <header>
+            <div class="logo">
+                <img src=https://dummyimage.com/50x50/e6c8e3/d1e6c8.jpg&text=kh width="50" height="50">
+            </div>
+            <div class="top-menu">
+                <ul>
+                    <li>상단메뉴1</li>
+                    <li>상단메뉴1</li>
+                    <li>상단메뉴1</li>
+                </ul>
+            </div>
+            <div class="main-menu">
+                <ul>
+                    <li>메뉴1</li>
+                    <li>메뉴1</li>
+                    <li>메뉴1</li>
+                </ul>
+            </div>
+            
+        </header>
+    
+    <div class="wrap content">
+        <div id="content">
+            <section>
+                <article>
+                    <p>What is Lorem Ipsum?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </article>
+                <article>
+                    <p>What is Lorem Ipsum?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </article>
+                <article>
+                    <p>What is Lorem Ipsum?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </article>
+                <article>
+                    <p>What is Lorem Ipsum?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </article>
+                <aside>
+                    <p>What is Lorem Ipsum?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </aside>
+
+            </section>
+            <aside>
+
+                <!--
+                <input type="button" value="a" onclick="a();">
+                <input type="button" value="b"> 
+                -->
+                
+                <input type="radio" name="tab" id="first" checked>
+                <input type="radio" name="tab" id="second">
+                
+
+                <div class="labels">
+                <label for="first">First</label>
+                <label for="second">Second</label>
+                </div>
+
+                <div class="itmes">
+                <div class="tab-item">
+                    <ul>
+                        <li>
+                            <a href="#">
+                            <div class="">
+                                <img src="https://dummyimage.com/45/ccc">
+                            </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                <p>HTML5 Canvas</p>
+                                <p>2023-03-08</p>
+                            </a>
+                            </div>    
+                        </li>
+                        <li>
+                            <a href="#">
+                            <div>
+                                <img src="https://dummyimage.com/45/ccc">
+                            
+                            </div>
+                            
+                            <div>
+                                <p>HTML5 Semantics Web</p>
+                                <p>2023-03-08</p>
+                            </div>
+                        </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <div>
+                                <img src="https://dummyimage.com/45/ccc">
+                            </div>
+                            <div>
+                                <p>HTML5 Audio</p>
+                                <p>2023-03-08</p>
+                            </div>
+                        </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <div>
+                                <img src="https://dummyimage.com/45/ccc">
+                            </div>
+                            <div>
+                                <p>HTML5 Video</p>
+                                <p>2023-03-08</p>
+                            </div>
+                        </a>
+                        </li>
+                    </ul>
+                <ul>
+                    <li>html5</li>
+                    <li>css</li>
+                    <li>javascript</li>
+                    <li>jquery</li>
+                </ul>
+                </div>
+                </div>
+
+                <div class="tab-item">
+                <ul>
+                    <li>Semantic</li>
+                    <li>Transition</li>
+                    <li>...</li>
+                    <li>...</li>
+                </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <div class="wrap footer">
+        <footer>
+            <p>What is Lorem Ipsum?
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </footer>
+    </div>
+    <script>
+        var a1 = document.getElementById("text1").innerText;
+        
+        document.getElementById("text1").innerText = "<b>바!꿈!<b>";
+    </script>
+</body>
+
+</html>
