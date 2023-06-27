@@ -1,6 +1,16 @@
-.tourHeader {
-background-color: aqua;
+
+.gatewayWrapper {
+    background-color: #f4f6f9;
+    border-bottom: 1px solid #eaedf2;
 }
+.gatewayInterGate{
+    display: flex;
+    justify-content: space-between;
+    width: 1280px; margin: 0 auto;
+}
+
+
+
 /*홈 투어 티켓 쇼핑 왼쪽 여백주기 */
 .navbar-nav {
     float: left;
