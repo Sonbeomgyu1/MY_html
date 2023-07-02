@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+</head>
+<style>
+    /* table 사이 간격 없애기 */
+    table{
+        border: 1px solid black;
+        border-collapse: collapse;
+    } 
+</style>
+
+
+<script>
+    $(loadedHandler);
+
+        function loadedHandler(){
+            // event 등록 
+            $('.c').on("blur", cntBlurHandler); /*blur는 포커스가 끝나고 바로 실행되는 함수*/
+            $("[type=button]").on("click", calcClickHandler);
+        }
+        // 각종 기능 함수들
+        function cntBlurHandler(event){
+            // 'this' equals 'event.target'
+            // 현재 focus된 item 수량 입력값
+            var cnt = $(this).val();
+
+            // 현재 focus된 item 항목의 가격
+            // parseInt 문자를 정수로 바꿔주는 함수 
+            //$(this) --> 해당 객체를 가져오는것 (<input type="text" name="c1" id="c1" class="c">)
+            //prev(). 이전 객체를 가져오는것
+            var itemPrice = parseInt($(this).parent().prev().text());
+
+            // 현재 focus된 item 항목의 합계 id값 가져오기
+            //attr--> id나 class값 type값 가져오는것
+            //$(this) --> 해당 객체를 가져오는것 (<input type="text" name="c1" id="c1" class="c">)
+            //next -> <input type="text" name="c1" id="c1" class="c"> 다음에 객체를 가져오는것
+
+            var idVal = $(this).parent().next().children().attr('id');
+
+            // 현재 focus된 item 합계 (cnt * itemPrice)
+            var sumItem = 0;
+            sumItem += (itemPrice *  cnt);
+
+            // 구해진 항목의 합계를 class 'p' 넣어준다.
+            // # -> id태크 . -> 클래스태그 
+            $('#'+idVal).val(sumItem);        
+        }
+
+        function calcClickHandler(event){
+            var cntSum = 0;
+            var priceSum = 0;
+
+            // 수량 합계
+            $(".c").each(function() {   
+                cntSum += parseInt($(this).val());
+            });
+
+            // 가격 합계
+            $(".p").each(function() {   
+                priceSum += parseInt($(this).val());
+            });
+            
+            // 구해진 합계 세팅
+            $('#cTotalCnt').val(cntSum);
+            $('#cTotalPrice').val(priceSum);
+        }
+</script>
+<style>
+</style>
+<body>
+    <form>
+        <table border="1">
+            <tr>
+                <th>메뉴</th>
+                <th>가격</th>
+                <th>수량</th>
+                <th>합계</th>
+            </tr>
+            <tr>
+                <td>아메리카노</td>
+                <td>2500</td>
+                <td><input type="text" name="c1" id="c1" class="c"></td>
+                <td><input type="text" name="c1Price" id="c1Price" class="p" readonly></td>
+            </tr>
+            <tr>
+                <td>라떼</td>
+                <td>3000</td>
+                <td><input type="text" name="c2" id="c2" class="c"></td>
+                <td><input type="text" name="c2Price" id="c2Price" class="p" readonly></td>
+            </tr>
+            <tr>
+                <td>생강라떼</td>
+                <td>4500</td>
+                <td><input type="text" name="c3" id="c3" class="c"></td>
+                <td><input type="text" name="c3Price" id="c3Price" class="p" readonly></td>
+            </tr>
+            <tr>
+                <th>합계</th>
+                <th></th>
+                <th><input type="text" name="cTotalCnt" id="cTotalCnt" class="ca" readonly></th>
+                <th><input type="text" name="cTotalPrice" id="cTotalPrice" class="pa" readonly></th>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="button" value="계산하기" >
+                    <input type="reset" >
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
