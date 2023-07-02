@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery dom event</title>
+    <script src="/resources/js/jquery-3.7.0.js"></script>
+    <script>
+        jQuery(document).ready(function(){
+            console.log("여기 loadevent - jQuery read");
+        });
+        $(document).ready(function(){
+            console.log("여기 loadevent - jQuery");
+        });
+        jQuery(function(){
+            console.log("여기 loadevent - jQuery");
+        });
+        $(function(){
+            console.log("여기 loadevent - $ ");
+        });
+
+
+
+        // onload / load : document가 모두 loading이 끝나면 발생하는 event
+        window.addEventListener("load",function(){
+            console.log("여기 loadevent - addEventListener");
+        });
+      
+        window.onload = function () {
+            console.log("여기 loadevent");
+            var element1 = document.getElementById("content");
+            console.log(element1);
+            // window.onload 후에
+            //event 등록 코드
+            $("#btnAdd1").click(ahandler);
+            $("#btnAdd2").click(ahandler);
+            $("#btnAdd3").click(ahandler);
+            $("#btnAdd4").click(ahandler);
+            $("#btnAdd5").click(ahandler);
+
+        };
+       
+        //envent handler 정의 - 의 위치 - window.onload 무관한(밖) 위치
+        function ahandler() {
+            console.log("a 호출");
+            var element1 = document.getElementById("content");
+            console.log(element1);
+        }
+
+
+        var element1 = document.getElementById("content");
+        console.log(element1);
+        //aHandler();
+    </script>
+</head>
+
+<body>
+    <script>
+        var element1 = $("content");
+        console.log(element1);
+    </script>
+    <div id="content">
+        <ul class="menu">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li id="select">menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+            <li>menu6</li>
+        </ul>
+    </div>
+    <script>
+        var element1 = $("content");
+        console.log(element1);
+    </script>
+
+    <button id="btnAdd">추가</button>
+
+    <script>
+        var element1 = $("#content");
+        console.log(element1);
+    </script>
+</body>
+
+</html>

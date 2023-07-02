@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="get" onsubmit="console.log('1');" onclick="console.log('3');">
+        <input type="text" name="nick">
+        <input type="submit" id="btnSubmit" onsubmit="console.log('2');"onclick="console.log('3');">
+    </form>
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click", function(){
+            console.log('5');
+        });
+        document.getElementById("btnSubmit").addEventListener("click", function(){
+            console.log('6');
+        });
+
+    </script>
+    <form>
+        <input type="text" name="nick">
+        <input type="button" id="frmNickSubmit">
+    </form>
+    <script>
+        document.getElementById("frmNickSubmit").addEventListener("click",function(){
+            document.getElementById("frmNick").action = "#";
+            document.getElementById("frmNick").method = "get";
+            document.getElementById("frmNick").submit();
+        });
+  </script>
+  <form action="#" method="get" onsubmit="frmSubmitHandler">
+   <input type="text" name="nick">
+   <input type="submit" value="submit기능2">
+  </form>
+  <script>
+    function frmSubmitHandler(){
+        console.log("sumbit이벤트 함수");
+        //주로 입력한 값들의 유효성 검사를 함.
+        //예 입력한 문자가 20글자이상이라면 alert 창으로 경고하고 
+        //다시 입력하게 한 후 문자가 20글자미만이면 action 으로 이동 (submit동작함)
+        var nickElement = document.getElementsByName("Nick");
+        console.log(nickElement);
+        if(nickElement[2].value.length<20){
+            console.log("nick이 20글자 미만");
+        }else{
+            console.log("nick이 20글자 이상");
+            alert("20글자 미만으로 작성해주세요");
+            //return false;
+        }
+    }
+  </script>
+
+    <button type="button" id="btn1" class="c1">버튼 1</button>
+    <button type="button" id="btn2" class="c1">버튼 2</button>
+    <button type="button" id="btn3" class="c1 c2">버튼 3</button>
+    <button type="button" id="btn4" class="c2">버튼 4</button>
+    <button type="button" id="btn5" class="c2">버튼 5</button>
+
+    <script>
+        var c1Elements = document.getElementsByClassName("c1");
+        console.log(c1Elements);
+        // c1Elements[0].onclick = c1clickHandler;
+        // c1Elements[1].onclick = c1clickHandler;
+        // c1Elements[2].addEventListener("click", c1clickHandler);
+        for(var i = 0; i < c1Elements.length; i++){
+            c1Elements[i].addEventListener("click", c1clickHandler);
+        }
+        var c2Elements = document.querySelectorAll(".c2");
+        for(var i = 0; i < c2Elements.length; i++){
+            c2Elements[i].addEventListener("click", c2clickHandler);
+        }
+        
+
+        function c1clickHandler(){
+            console.log("c1 click");
+            console.log(this);
+        }
+        function c2clickHandler(){
+            console.log("c2 click");
+            console.log(this);
+        }
+        function btnclickHandler(){
+            console.log("btn click");
+            console.log(this);
+        }
+    </script>
+    
+</body>
+</html>

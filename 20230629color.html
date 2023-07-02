@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .area {
+            border: 1px;
+            background-color: #FF00DD;
+            width: 100px;
+            height: 100px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="areal" class="area"></div>
+    <button onclick="btn_changeColor('#FF0000');">red</button>
+    <button onclick="btn_changeColor('#0054FF');">blue</button>
+    <button onclick="btn_changeColor('#FFE400');">yellow</button>
+    <button onclick="btn_changeColor('#CCCCCC');">#ccc</button>
+    <hr>
+
+    <div>
+        color Code 입력후 enter <input id="color" type="color">
+
+        <button onclick="colorChange();">변경</button>
+
+    </div>
+    <hr>
+    <select id=selectId style="color:black;"  onChange=applyOption()>
+        <option style="color:#ff0000;">red
+        <option style="color:#ff9900;">orange
+        <option style="color:#ffff00;">yellow
+        <option style="color:#00ff00;">green
+        <option style="color:#3333cc;">pastel blue
+        <option style="color:#0000ff;">blue
+        <option style="color:#ff00ff;">pink
+    </select>
+
+    <script>
+        function btn_changeColor(color) {
+            document.getElementById('areal').style.backgroundColor = color;
+        }
+        function colorChange() {
+            document.getElementById("areal").style.backgroundColor
+                = document.getElementById("color").value;
+        };
+
+        var selectedOptionNum;
+
+        function applyOption() { // select의 onChange에서 불러올 함수를 정의합니다
+            selectedOptionNum = document.getElementById('selectId').selectedIndex; // 선택된 옵션의 순서를 받아옵니다
+
+            if (selectedOptionNum == 0) { selectId.style.color = 'ff0000'; } // 값에 따라 셀렉트의 스타일을 바꿔주면 됩니다
+            else if (selectedOptionNum == 1) { selectId.style.color = 'ff9900'; }
+            else if (selectedOptionNum == 2) { selectId.style.color = 'ffff00'; }
+            else if (selectedOptionNum == 3) { selectId.style.color = '00ff00'; }
+            else if (selectedOptionNum == 4) { selectId.style.color = '3333cc'; }
+            else if (selectedOptionNum == 5) { selectId.style.color = '0000ff'; }
+            else { selectId.style.color = 'ff00ff'; }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
